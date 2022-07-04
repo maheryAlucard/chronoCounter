@@ -48,3 +48,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: npm run publish
+    - name: create downloadable files
+      uses: actions/upload-artifact@v2
+      with:
+        name: out folder
+        path: out
